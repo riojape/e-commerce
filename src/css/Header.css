@@ -1,0 +1,55 @@
+.header{
+    background-color: var(--white);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*------ Logo ------*/
+.header span{
+    font-size: var(--text-normal);
+    cursor: pointer;
+}
+
+/*------ Searcher ------*/
+.searcher-container{
+    display: flex;
+    width: 80%;
+    max-width: 400px;
+    align-items: center;
+}
+.searcher{
+    width: 90%;
+    max-width: 400px;
+}
+
+/*------ Shopping cart ------*/
+
+
+/*------ Menu ------*/
+.menu-icon{
+    cursor: pointer;
+}
+
+/*------ NavBar ------*/
+.navBar ul{
+    list-style: none;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.navBar ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: var(--text-normal);
+    color: var(--blue);
+    line-height: 32px;
+}
+
+/* @media (min-width: 768px) {
+    .searcher{
+        width: 400px;
+    }
+} */
