@@ -1,0 +1,108 @@
+.product {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.title, .results {
+    width: 90%;
+    margin: 0 auto;
+}
+.title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: var(--text-big);
+    line-height: 40px;
+    color: var(--blue);
+}
+.product .results {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+.opinions{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background-color: var(--white);
+}
+.opinions-title{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: var(--text-normal);
+    line-height: 20px;
+}
+
+/*--------- Features ---------*/
+.features {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 1px auto;
+    padding-top: 20px;
+    background-color: var(--white);;
+}
+.features-title, .features-contents, .opinions{
+    width: 90%;
+    margin: 0 auto;
+}
+.features-title{
+    color: var(--blue);
+    font-weight: 700;
+    font-size: var(--text-normal);
+    line-height: 20px;
+}
+.features-contents{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.features-contents div p{
+    font-weight: 400;
+    font-size: var(--text-small);
+    padding-bottom: 15px;
+}
+@media (min-width: 1024px) {
+    .features-contents{
+        flex-direction: row;
+    }
+    .features-contents div:nth-child(2){
+        margin-left: 150px;
+    }
+}
+
+/*--------- Opinion ---------*/
+.opinion{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding-top: 25px;
+}
+.opinion .username{
+    display: flex;
+    align-items: center;
+}
+.opinion .username img{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+}
+.opinion .username h3{
+    color: var(--black);
+    font-weight: 600;
+    font-size: var(--text-small);
+    line-height: 32px;
+    margin-left: 15px;
+}
+.opinion-text{
+    color: var(--black);
+    font-weight: 400;
+    font-size: var(--text-small);
+    line-height: 24px;
+}

@@ -1,0 +1,38 @@
+.shopping{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.shopping .title{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: var(--text-medium);
+    line-height: 40px;
+    color: var(--blue);
+}
+.shopping-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+@media (min-width: 1024px) {
+    .shopping{
+        width: 72%;
+    }
+    .shopping-content{
+        flex-direction: row;
+        width: 100%;
+        background-color: var(--white);
+        padding: 20px;
+    }
+    .shopping-selected{
+        width: 50%;
+    }
+    .shopping-pay{
+        width: 50%;
+    }
+}

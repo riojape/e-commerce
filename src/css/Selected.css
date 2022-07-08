@@ -1,0 +1,43 @@
+
+.selected{
+    min-width: 90%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 1px;
+}
+.selected img{
+    width: 40px;
+    height: 40px;
+}
+.selected .description{
+    margin: 0 20px;
+    width: 70%;
+}
+.selected .description p{
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 22px;
+}
+.selected .description p:nth-child(2){
+    color: var(--blue);
+}
+.selected .counter{
+    display: flex;
+    width: 30%;
+    justify-content: end;
+}
+.selected .counter p:nth-child(2){
+    margin: 0 10px;
+    font-size: var(--text-normal);
+}
+.sign {
+    font-size: var(--text-normal);
+    cursor: pointer;
+    padding: 0 5px;
+}
+@media (min-width: 1024px){
+    .selected{
+        background-color: var(--white);
+    }
+}

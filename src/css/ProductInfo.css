@@ -1,0 +1,104 @@
+
+.productInfo{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: var(--white);
+    margin-bottom: 10px;
+}
+.productInfo-image{
+    width: 230px;
+    height: 200px;
+    margin: 0 auto;
+}
+.productInfo-description{
+    width: 90%;
+    margin: 15px auto;
+}
+.productInfo-description h2{
+    color: var(--blue);
+    font-weight: 700;
+    font-size: var(--text-medium);
+    line-height: 27px;
+}
+.productInfo-description .price{
+    font-weight: 400;
+    font-size: var(--text-normal);
+    line-height: 32px;
+    display: flex;
+    margin: 10px 0;
+}
+.price p:nth-child(1){
+    color: var(--blue);
+    margin-right: 10px;
+}
+.price p:nth-child(2){
+    color: var(--pink);
+    text-decoration: line-through;
+}
+.productInfo-description p {
+    font-weight: 400;
+    font-size: var(--text-small);
+    line-height: 24px;
+    color: var(--gray);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    width: 200px;
+    margin: 0 auto;
+    height: 40px;
+    font-weight: 400;
+    font-size: var(--text-normal);
+    line-height: 32px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transform: scale(1);
+}
+.btn-primary{
+    color: var(--white);
+    background-color: var(--pink);
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.btn-secondary{
+    color: var(--pink);
+    background-color: var(--white);
+    border: 1px var(--pink) solid;
+    border-radius: 5px;
+}
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.08);
+    box-shadow: 5px 5px 20px;
+}
+
+@media (min-width: 768px) {
+    .buttons{
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media (min-width: 1224px) {
+    .productInfo{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 20px;
+    }
+
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .productInfo-description{
+        margin: 0 25px;
+        width: auto;
+    }
+}

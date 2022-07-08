@@ -11,14 +11,15 @@ html {
   --pink: rgb(251, 46, 134);
   --white: rgb(255, 255, 255);
   --black: rgb(17, 17, 17);
-  --text: rgb(138, 143, 185);
-  --text-small: 1.6rem;
-  --text-normal: 1.8rem;
-  --text-medium: 2.2rem;
-  --text-big: 3.2rem;
+  --gray: rgb(138, 143, 185);
+  --text-small: 1.4rem;
+  --text-normal: 1.6rem;
+  --text-medium: 2rem;
+  --text-big: 3rem;
 }
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(235, 235, 235);
 }
