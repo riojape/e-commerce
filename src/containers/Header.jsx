@@ -6,12 +6,12 @@ import Navbar from "../components/Navbar";
 import "../css/Header.css";
 import heineken from "../assets/heineken-logo.svg";
 import { NavLink } from "react-router-dom";
+import { useFetch } from "../hooks/useFetch";
 
-const Header = () => {
-  /*const onChange = (e) => {
-    console.log(e.target.value);
-  };*/
-
+const Header = ({ setSearch, count, setCount }) => {
+  const onChange = (e) => {
+    setSearch(e.target.value);
+  };
   return (
     <header className="header">
       <NavLink to="/">
@@ -26,10 +26,13 @@ const Header = () => {
           label="Searcher"
           variant="outlined"
           size="small"
+          onChange={onChange}
         />
-        <IconButton>
-          <SearchIcon className="searcher-icon" fontSize="large"></SearchIcon>
-        </IconButton>
+        <NavLink to="/searcheds">
+          <IconButton>
+            <SearchIcon className="searcher-icon" fontSize="large"></SearchIcon>
+          </IconButton>
+        </NavLink>
         <div className="shopping-cart">
           <NavLink to="/comprar">
             <IconButton>

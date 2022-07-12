@@ -1,8 +1,7 @@
 import React from "react";
 import { data } from "../data";
 
-const Features = () => {
-  const product = data[0];
+const Features = ({ product }) => {
   return (
     <section className="features">
       <h3 className="features-title">

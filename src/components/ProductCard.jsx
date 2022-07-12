@@ -1,8 +1,10 @@
-import "../css/ProductInfo.css";
+import React from "react";
+import { data } from "../data";
 import macbook1 from "../assets/macbook1.png";
 import { Link } from "react-router-dom";
 
-const ProductInfo = ({ product }) => {
+const ProductCard = () => {
+  const product = data[0];
   return (
     <article className="productInfo">
       <img className="productInfo-image" src={macbook1} />
@@ -28,4 +30,4 @@ const ProductInfo = ({ product }) => {
   );
 };
 
-export default ProductInfo;
+export default ProductCard;

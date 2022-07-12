@@ -1,18 +1,14 @@
 import React from "react";
-import ProductInfo from "../components/ProductInfo";
+import ProductCard from "../components/ProductCard";
 import "../css/OffersDay.css";
 
-const OffersDay = () => {
+const OffersDay = (props) => {
   return (
     <div className="offers-day">
       <br />
       <h2 className="title">Ofertas del día</h2>
       <br />
-      <div className="offers-list">
-        <ProductInfo></ProductInfo>
-        <ProductInfo></ProductInfo>
-        <ProductInfo></ProductInfo>
-      </div>
+      <div className="offers-list">{props.children}</div>
     </div>
   );
 };

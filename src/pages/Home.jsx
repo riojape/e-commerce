@@ -1,10 +1,13 @@
 import React from "react";
+import ProductCard from "../components/ProductCard";
 import OffersDay from "../containers/OffersDay";
 
 const Home = () => {
   return (
     <div className="home">
-      <OffersDay />
+      <OffersDay>
+        <ProductCard />
+      </OffersDay>
     </div>
   );
 };

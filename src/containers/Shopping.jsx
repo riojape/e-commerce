@@ -10,12 +10,6 @@ const Shopping = () => {
       <div className="shopping-content">
         <div className="shopping-selected">
           <Selected></Selected>
-          <Selected></Selected>
-          <Selected></Selected>
-          <Selected></Selected>
-          <Selected></Selected>
-          <Selected></Selected>
-          <Selected></Selected>
         </div>
         <div className="shopping-pay">
           <Pay></Pay>
