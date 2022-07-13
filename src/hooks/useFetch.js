@@ -4,7 +4,8 @@ import { data } from "../data";
 function useFetch(id) {
   const [products, setProducts] = useState(data);
   const [search, setSearch] = useState("");
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
+  const [selecteds, setSelecteds] = useState([]);
 
   let searchedProducts = [];
 
@@ -24,8 +25,10 @@ function useFetch(id) {
     search,
     setSearch,
     searchedProducts,
-    // count,
-    // setCount,
+    count,
+    setCount,
+    selecteds,
+    setSelecteds,
   };
 }
 

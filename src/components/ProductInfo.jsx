@@ -2,7 +2,12 @@ import "../css/ProductInfo.css";
 import macbook1 from "../assets/macbook1.png";
 import { Link } from "react-router-dom";
 
-const ProductInfo = ({ product }) => {
+const ProductInfo = ({ product, count, setCount, selecteds, setSelecteds }) => {
+  const handleClick = () => {
+    setCount(count + 1);
+    setSelecteds([...selecteds, product]);
+  };
+
   return (
     <article className="productInfo">
       <img className="productInfo-image" src={macbook1} />
@@ -22,7 +27,9 @@ const ProductInfo = ({ product }) => {
       </div>
       <div class="buttons">
         <button class="btn btn-primary">Comprar ahora</button>
-        <button class="btn btn-secondary">Agregar al carrito</button>
+        <button class="btn btn-secondary" onClick={handleClick}>
+          Agregar al carrito
+        </button>
       </div>
     </article>
   );

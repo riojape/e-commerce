@@ -3,7 +3,13 @@ import ProductCard from "../components/ProductCard";
 import ProductInfo from "../components/ProductInfo";
 import "../css/Product.css";
 
-const Searcheds = ({ searchedProducts }) => {
+const Searcheds = ({
+  searchedProducts,
+  count,
+  setCount,
+  selecteds,
+  setSelecteds,
+}) => {
   console.log(searchedProducts.length);
   return (
     <div className="searcheds">
@@ -11,7 +17,13 @@ const Searcheds = ({ searchedProducts }) => {
       <p className="results">654 resultados</p>
       <section className="list">
         {searchedProducts.map((product) => (
-          <ProductInfo product={product} />
+          <ProductInfo
+            product={product}
+            count={count}
+            setCount={setCount}
+            selecteds={selecteds}
+            setSelecteds={setSelecteds}
+          />
         ))}
       </section>
     </div>

@@ -8,7 +8,7 @@ import heineken from "../assets/heineken-logo.svg";
 import { NavLink } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 
-const Header = ({ setSearch, count, setCount }) => {
+const Header = ({ setSearch, count }) => {
   const onChange = (e) => {
     setSearch(e.target.value);
   };
@@ -42,7 +42,7 @@ const Header = ({ setSearch, count, setCount }) => {
               ></ShoppingCartIcon>
             </IconButton>
           </NavLink>
-          <span className="shop-number">10</span>
+          <span className="shop-number">{count}</span>
         </div>
         <MenuIcon className="menu-icon" fontSize="large"></MenuIcon>
       </div>

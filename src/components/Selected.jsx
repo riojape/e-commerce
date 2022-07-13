@@ -2,13 +2,15 @@ import React from "react";
 import "../css/Selected.css";
 import macbook1 from "../assets/macbook1.png";
 
-const Selected = () => {
+const Selected = ({ product }) => {
   return (
     <div className="selected">
       <img src={macbook1} alt="image" />
       <div className="description">
-        <p>Apple Macbook...</p>
-        <p>$25,00.00</p>
+        <p>
+          {product.brand} {product.name}
+        </p>
+        <p>${product.precio}</p>
       </div>
       <div className="counter">
         <p className="sign">-</p>
