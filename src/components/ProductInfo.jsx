@@ -1,8 +1,13 @@
 import "../css/ProductInfo.css";
 import macbook1 from "../assets/macbook1.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { EcommerceContext } from "../context/EcommerceProvider";
 
-const ProductInfo = ({ product, count, setCount, selecteds, setSelecteds }) => {
+const ProductInfo = ({ product }) => {
+  const { count, setCount, selecteds, setSelecteds } =
+    useContext(EcommerceContext);
+
   const handleClick = () => {
     setCount(count + 1);
     setSelecteds([...selecteds, product]);

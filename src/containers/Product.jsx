@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Features from "../components/Features";
 import Opinion from "../components/Opinion";
 import ProductInfo from "../components/ProductInfo";
+import { EcommerceContext } from "../context/EcommerceProvider";
 import "../css/Product.css";
 
-const Product = ({ products }) => {
+const Product = () => {
   const { id } = useParams();
+  const { products } = useContext(EcommerceContext);
   let product = products.filter((product) => {
     return product.id === id;
   })[0];

@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
-import ProductCard from "../components/ProductCard";
+import React, { useContext, useEffect } from "react";
 import ProductInfo from "../components/ProductInfo";
+import { EcommerceContext } from "../context/EcommerceProvider";
 import "../css/Product.css";
 
-const Searcheds = ({
-  searchedProducts,
-  count,
-  setCount,
-  selecteds,
-  setSelecteds,
-}) => {
+const Searcheds = () => {
+  const { searchedProducts } = useContext(EcommerceContext);
   console.log(searchedProducts.length);
   return (
     <div className="searcheds">
@@ -17,13 +12,7 @@ const Searcheds = ({
       <p className="results">654 resultados</p>
       <section className="list">
         {searchedProducts.map((product) => (
-          <ProductInfo
-            product={product}
-            count={count}
-            setCount={setCount}
-            selecteds={selecteds}
-            setSelecteds={setSelecteds}
-          />
+          <ProductInfo product={product} />
         ))}
       </section>
     </div>

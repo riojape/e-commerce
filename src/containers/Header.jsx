@@ -6,9 +6,11 @@ import Navbar from "../components/Navbar";
 import "../css/Header.css";
 import heineken from "../assets/heineken-logo.svg";
 import { NavLink } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
+import { useContext } from "react";
+import { EcommerceContext } from "../context/EcommerceProvider";
 
-const Header = ({ setSearch, count }) => {
+const Header = () => {
+  const { setSearch, count } = useContext(EcommerceContext);
   const onChange = (e) => {
     setSearch(e.target.value);
   };
