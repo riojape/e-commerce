@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { EcommerceContext } from "../context/EcommerceProvider";
 import "../css/Pay.css";
 
 const Pay = () => {
+  const { selecteds } = useContext(EcommerceContext);
+  let sumTotal = 0;
+  selecteds.map((product) => {
+    sumTotal += product.precio;
+  });
   return (
     <section className="pay">
       <div className="pay-total">
         <p>Total:</p>
-        <p>$25,400.00</p>
+        <p>${sumTotal}</p>
       </div>
       <div className="personal-information">
         <h3>Datos Personales</h3>

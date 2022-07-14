@@ -8,9 +8,9 @@ import {
 } from "react-router-dom";
 import Home from "../pages/Home";
 import Header from "../containers/Header";
-import Product from "../containers/Product";
+import Product from "../pages/Product";
 import Searcheds from "../pages/Searcheds";
-import Shopping from "../containers/Shopping";
+import Shopping from "../pages/Shopping";
 import { EcommerceProvider } from "../context/EcommerceProvider";
 
 function App() {

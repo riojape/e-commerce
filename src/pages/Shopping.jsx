@@ -13,7 +13,7 @@ const Shopping = () => {
       <div className="shopping-content">
         <div className="shopping-selected">
           {selecteds.map((product) => (
-            <Selected product={product} />
+            <Selected product={product} key={`select-${product.id}`} />
           ))}
         </div>
         <div className="shopping-pay">

@@ -1,12 +1,16 @@
-import React from "react";
-import ProductCard from "../components/ProductCard";
+import React, { useContext } from "react";
+import ProductInfo from "../components/ProductInfo";
 import OffersDay from "../containers/OffersDay";
+import { EcommerceContext } from "../context/EcommerceProvider";
 
 const Home = () => {
+  const { products } = useContext(EcommerceContext);
   return (
     <div className="home">
       <OffersDay>
-        <ProductCard />
+        {products.map((product) => (
+          <ProductInfo product={product} />
+        ))}
       </OffersDay>
     </div>
   );
